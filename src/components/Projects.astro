@@ -1,5 +1,5 @@
 ---
-import GitHub from "@/components/icons/skills/GitHub.astro"
+import GitHub from "@/components/icons/GitHub.astro"
 
 import Link from "@/components/icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
@@ -74,7 +74,7 @@ const PROJECTS = [
   {
     title: "Pupadevs/Laramain - DDD Estructura y CQRS ",
     description:" Es un paquete Laravel diseñado para facilitar la implementación de la arquitectura DDD (Domain-Driven Design) y CQRS (Command Query Responsibility Segregation) en tus aplicaciones Laravel.",
-    image:"/projects/laramain.png",
+    image:"/projects/laramain.webp",
     github:"https://github.com/pupadevs/laramain",
     link:"https://packagist.org/packages/pupadevs/laramain",
     tags:[TAGS.LARAVEL, TAGS.PHP]
@@ -85,7 +85,7 @@ const PROJECTS = [
     description:"ForoHub API es una API desarrollada en Java utilizando Spring Boot, que permite la creación y gestión de tópicos y respuestas en un foro. La aplicación está diseñada siguiendo una arquitectura por capas, con uso de DTOs y patrones de diseño para mantener un código limpio y mantenible.",
     github: "https://github.com/pupadevs/forohub_alurachallenge",
     link: "",
-    image:"/projects/topic.png",
+    image:"/projects/topic.webp",
     tags:[TAGS.JAVA, TAGS.SPRING ,TAGS.MYSQL]
   },
    {
@@ -105,8 +105,8 @@ const PROJECTS = [
       PROJECTS.map(({ image, title, description, tags, link, github }) => (
         <article class="flex-none w-full p-2 sm:w-full md:w-full lg:w-full group">
           <div class="w-full">
-            <div class="relative flex flex-col  items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:scale-100 md:scale-110 group-hover:scale-105 sm:group-hover:scale-105 sm:hover:scale-105 lg:scale-100 lg:hover:scale-90 lg:hover:bg-gray-800/50 lg:border lg:border-gray-800 lg:hover:border-gray-700">
-              <img alt={title} class="object-cover  w-full h-80 transition duration-500 sm:h-72 md:h-80 lg:h-80" loading="lazy" src={image} />
+            <div class="relative flex flex-col  items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-lg dark:shadow-lg shadow-gray-600 dark:shadow-purple-600 overflow-clip rounded-xl sm:scale-100 md:scale-110 group-hover:scale-105 sm:group-hover:scale-105 sm:hover:scale-105 lg:scale-100 lg:hover:scale-90 lg:hover:bg-gray-800/50 lg:border lg:border-gray-800 lg:hover:border-gray-700">
+              <img alt={title} class="object-contain  w-full h-80 transition duration-500 sm:h-72 md:h-80 lg:h-80" loading="lazy" src={image} />
             </div>
           </div>
 
