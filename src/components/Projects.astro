@@ -1,0 +1,149 @@
+---
+import GitHub from "@/components/icons/skills/GitHub.astro"
+
+import Link from "@/components/icons/Link.astro"
+import LinkButton from "./LinkButton.astro"
+
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    
+  },
+  PHP: {
+    name: "PHP",
+    class: "bg-[#777BB4] text-white",
+  
+  }
+  ,
+  LARAVEL: {
+    name: "Laravel",
+    class: "bg-[#FF3E00] text-white",
+  
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-[#00758F] text-white",
+    
+  },
+  REDIS: {
+    name: "Redis",
+    class: "bg-[#DC382D] text-white",
+   
+  },
+  CQRS: {
+    name: "CQRS",
+    class: "bg-[#EA5236] text-white",
+   
+  },
+  REACT: {
+    name: "React",
+    class: "bg-[#61DBFB] text-white",
+    
+  },
+  DOCKER: {
+    name: "Docker",
+    class: "bg-[#2496ED] text-white",
+    
+  },
+  JAVA:{
+    name: "Java",
+    class: "bg-[#EA5236] text-white"
+  },
+  SPRING:{
+    name: "Springboot",
+    class:"bg-[#6DB33F] text-white"
+  }
+}
+const PROJECTS = [
+  {
+    title: "ITA Profiles - Proyecto de IT Academy",
+    description:
+      "ITA Profiles es un proyecto desarrollado por estudiantes del curso de post-especialización de IT Academy, cuyo objetivo es conectar a los propios estudiantes con empresas en busca de talento emergente. La plataforma permite a los alumnos crear perfiles profesionales que destacan sus habilidades y experiencia, facilitando su visibilidad ante potenciales empleadores. A través de este proyecto, los estudiantes tienen la oportunidad de trabajar en equipo bajo la metodología SCRUM, enfrentando desafíos reales y utilizando tecnologías comunes en la industria, lo que les permite ganar experiencia práctica y prepararse mejor para el mundo laboral",
+    github: "https://github.com/IT-Academy-BCN/ita-profiles",
+    link: "",
+    image: "/projects/BDT_it-academy-y-basa.png",
+    tags: [TAGS.PHP,TAGS.MYSQL, TAGS.LARAVEL, TAGS.REACT],
+  },
+  {
+    title: "Pupadevs/Laramain - DDD Estructura y CQRS ",
+    description:" Es un paquete Laravel diseñado para facilitar la implementación de la arquitectura DDD (Domain-Driven Design) y CQRS (Command Query Responsibility Segregation) en tus aplicaciones Laravel.",
+    image:"/projects/laramain.png",
+    github:"https://github.com/pupadevs/laramain",
+    link:"https://packagist.org/packages/pupadevs/laramain",
+    tags:[TAGS.LARAVEL, TAGS.PHP]
+  },
+
+  {
+    title: "ForoHub - Creacion de topics",
+    description:"ForoHub API es una API desarrollada en Java utilizando Spring Boot, que permite la creación y gestión de tópicos y respuestas en un foro. La aplicación está diseñada siguiendo una arquitectura por capas, con uso de DTOs y patrones de diseño para mantener un código limpio y mantenible.",
+    github: "https://github.com/pupadevs/forohub_alurachallenge",
+    link: "",
+    image:"/projects/topic.png",
+    tags:[TAGS.JAVA, TAGS.SPRING ,TAGS.MYSQL]
+  },
+   {
+    title: "Dice Game - API de juego de dados",
+    description:
+      "Esta API permite a los jugadores registrar tiradas de dados y calcular su tasa de éxito. También incluye autenticación a través de Laravel Passport y gestión de roles con Spatie Permission.",
+    github: "https://github.com/pupadevs/diceGameAPI",
+    link: "",
+    image: "https://svgsilh.com/svg/152068-e91e63.svg",
+    tags: [TAGS.PHP,TAGS.LARAVEL, TAGS.MYSQL],
+  }, 
+]
+---
+<div class="relative w-full overflow-y-auto scrollbar-hide">
+  <div class="flex flex-wrap mr-8 gap-y-8 max-h-[500px] max-w-[850px]">
+    {
+      PROJECTS.map(({ image, title, description, tags, link, github }) => (
+        <article class="flex-none w-full p-2 sm:w-full md:w-full lg:w-full group">
+          <div class="w-full">
+            <div class="relative flex flex-col  items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:scale-100 md:scale-110 group-hover:scale-105 sm:group-hover:scale-105 sm:hover:scale-105 lg:scale-100 lg:hover:scale-90 lg:hover:bg-gray-800/50 lg:border lg:border-gray-800 lg:hover:border-gray-700">
+              <img alt={title} class="object-cover  w-full h-80 transition duration-500 sm:h-72 md:h-80 lg:h-80" loading="lazy" src={image} />
+            </div>
+          </div>
+
+          <div class="w-full">
+            <h3 class="text-2xl font-bold text-gray-800 mt-8 md:mt-8 dark:text-gray-100">
+              {title}
+            </h3>
+            <div class="flex flex-wrap mt-2">
+              <ul class="flex flex-row flex-wrap mb-2 gap-2 md:gap-x-2 md:flex-nowrap">
+                {tags.map((tag) => (
+                  <li>
+                    <span class={`flex flex-row gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                      {tag.name}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+
+              <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+              <footer class="flex items-end justify-start mt-4 gap-x-4">
+                {github && (
+                  <LinkButton href={github}>
+                    <GitHub class="size-6" />
+                    Code
+                  </LinkButton>
+                )}
+                {link && (
+                  <LinkButton href={link}>
+                    <Link class="size-4" />
+                    Preview
+                  </LinkButton>
+                )}
+              </footer>
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</div>

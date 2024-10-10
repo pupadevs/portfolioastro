@@ -1,0 +1,44 @@
+---
+import SkillItem from "./SkillItem.astro";
+
+
+const skills = [
+  { name: "PHP", class: "bg-[#777BB4] text-white", category: "Backend" },
+  { name: "Laravel", class: "bg-[#FF3E00] text-white", category: "Backend" },
+  { name: "MySQL", class: "bg-[#00758F] text-white", category: "Database" },
+  { name: "PostgreSQL", class: "bg-[#336791] text-white", category: "Database" },
+  { name: "Java",  class: "bg-[#EA5236] text-white", category: "Backend" },
+  { name: "Tailwind CSS",  class: "bg-[#003159] text-white", category: "Frontend" },
+  { name: "Redis",class: "bg-[#DC382D] text-white", category: "Cache" },
+  { name: "Docker", class: "bg-[#0DBD8B] text-white", category: "DevOps" },
+  { name: "Spring Boot",  class: "bg-[#6DB33F] text-white", category: "Backend" },
+  { name: "VsCode", class: "bg-[#007ACC] text-white", category: "IDEs" },
+  { name: "Git", class: "bg-[#F05032] text-white", category: "Tools" },
+  { name: "GitHub", class: "bg-[#24292F] text-white", category: "Tools" },
+  { name: "Postman", class: "bg-[#FF6C37] text-white", category: "Tools" },
+  { name: "Intellij", class: "bg-[#24292F] text-white", category: "IDEs" },
+  { name: "XAMPP", class: "bg-[#FF6C37] text-white", category: "Tools"},
+  { name: "HTML", class: "bg-[#E34F26] text-white",category: "Frontend"},
+  { name: "CSS", class: "bg-[#1572B6] text-white",category: "Frontend"}
+  
+];
+
+const categories = ["Backend", "Frontend", "Database", "Cache", "DevOps", "IDEs", "Tools"];
+---
+
+<div class="skills-container mb-10 mr-8 pr-6 p-2">
+  {categories.map((category) => (
+    <div class="category-section mb-6">
+      <h3 class="category-title text-2xl text-gray-800 dark:text-white font-bold mt-4">{category}</h3>
+      <div class="skills-list flex flex-wrap gap-2 sm:flex-row sm:gap-2 md:flex-row md:gap-2 lg:flex-row lg:gap-2 max-h-[300px]">
+        {skills.filter((skill) => skill.category === category).map((skill) => (
+          <SkillItem
+            key={skill.name}
+            name={skill.name}
+            class={skill.class}
+          />
+        ))}
+      </div>
+    </div>
+  ))}
+</div>

@@ -1,0 +1,27 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="256"
+  height="256"
+  preserveAspectRatio="xMidYMid"
+  viewBox="0 0 256 256"
+  {...Astro.props}
+>
+  <defs>
+    <linearGradient id="postgres-gradient" x1="50%" x2="50%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#336791"></stop>
+      <stop offset="100%" stop-color="#20476A"></stop>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" fill="url(#postgres-gradient)" />
+  <text
+    x="50%"
+    y="50%"
+    text-anchor="middle"
+    font-family="Arial, sans-serif"
+    font-size="64"
+    fill="#FFF"
+    dy=".3em"
+  >
+    PostgreSQL
+  </text>
+</svg>

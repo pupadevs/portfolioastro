@@ -1,0 +1,29 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="256"
+  height="256"
+  preserveAspectRatio="xMidYMid"
+  viewBox="0 0 256 256"
+  {...Astro.props}
+>
+  <defs>
+    <linearGradient id="laravel-gradient" x1="50%" x2="50%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#F55247"></stop>
+      <stop offset="100%" stop-color="#D02F26"></stop>
+    </linearGradient>
+  </defs>
+  <!-- Círculo con el gradiente rojo -->
+  <circle cx="128" cy="128" r="128" fill="url(#laravel-gradient)" />
+  <!-- Texto de Laravel en blanco, centrado -->
+  <text
+    x="50%"
+    y="50%"
+    text-anchor="middle"
+    font-family="Arial, sans-serif"
+    font-size="64"
+    fill="#FFF"
+    dy=".3em"
+  >
+    Laravel
+  </text>
+</svg>

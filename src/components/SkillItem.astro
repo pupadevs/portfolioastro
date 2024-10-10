@@ -1,0 +1,30 @@
+---
+interface Skill {
+  name: string;
+  class?: string;
+}
+
+const { name, class: className } = Astro.props;
+---
+
+<div class={`skill-item ${className} p-2 rounded-lg shadow-md hover:scale-105 transition-all`}>
+  <div class="flex items-center justify-between gap-4">
+  
+    <div>
+      <h4 class="font-semibold text-10">{name}</h4>
+    </div>
+  </div>
+</div>
+
+<style>
+  .skill-item {
+    transition: all 0.3s ease;
+  }
+
+  .skill-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+
+</style>

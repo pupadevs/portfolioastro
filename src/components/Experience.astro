@@ -1,0 +1,30 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCE = [
+  {
+    date: "09.2023 - 03.2024",
+    title: "PHP Developer",
+    company: "IT Academy",
+    description:
+      "Fui parte de equipos ágiles trabajando con la metodología Scrum, centrado en el diseño y desarrollo de APIs REST. Contribuí a crear soluciones eficientes y escalables que ayudaron a cumplir con los objetivos del equipo. Además, me enfoqué en optimizar procesos para mejorar el rendimiento y la calidad del producto final.",
+  },
+  {
+    date: "03.2015 - 05.2019 ",
+    title: "FilmMaker",
+    company: "Freelance",
+    description:
+      "Trabajé como filmmaker freelance, colaborando con una variedad de clientes, desde artistas independientes hasta pequeñas empresas. En cada proyecto, me encargué de desarrollar y ejecutar storyboards, aportando conceptos visuales claros y efectivos que ayudaron a estructurar la narrativa. Además, asumí la responsabilidad de la edición y postproducción, asegurando que el producto final reflejara fielmente la visión del cliente, siempre manteniendo altos estándares de calidad."
+  },
+  
+]
+---
+
+<ol class="relative mt-10">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
