@@ -16,11 +16,38 @@ const { description, title } = Astro.props
 <!doctype html>
 <html lang="es">
   <head>
+    
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="generator" content={Astro.generator} />
+<!-- Meta -->
+
+
+<meta name="keywords" content="Web Developer, Programador Web, Apps, Desarrollo Web, Apps Developer, Desarrollador Web Backend" />
+<meta name="robots" content="index, follow" />
+<meta name="author" content="Peterson Andres Sena" />
+
+<!-- Meta tags para redes sociales (Open Graph) -->
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content="/public/mariposa.png" />
+<meta property="og:url" content="https://petersonsenaportfolio.netlify.app/" />
+<meta property="og:type" content="website" />
+
+<!-- Meta tags para Twitter Cards -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content="/public/mariposa.png" />
+
+<!-- Meta etiquetas adicionales para SEO -->
+<link rel="canonical" href="https://petersonsenaportfolio.netlify.app/" />
+<meta property="og:locale" content="es_ES" /> <!-- Para el idioma específico -->
+<meta property="og:site_name" content={title} />
+    
+
     <title>{title}</title>
     <ViewTransitions />
   </head>
