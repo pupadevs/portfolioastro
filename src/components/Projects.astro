@@ -63,6 +63,16 @@ const TAGS = {
 }
 const PROJECTS = [
   {
+    title: "Jornalia (API) - Registro y calculo de jornadas laborales",
+    description:
+    "Jornalia es una API desarrollada con Laravel 11 que permite a los empleados registrar sus jornadas laborales y calcular su salario, incluyendo horas extras, nocturnas y festivas. Utiliza MySQL para la base de datos y Redis para la caché y la gestión de colas de tareas. La autenticación se realiza mediante JWT para garantizar un acceso seguro, y los roles y permisos de los usuarios se gestionan con Spatie Permission. La arquitectura sigue el patrón MVC e incluye capas adicionales como DTOs, Services y Traits, lo que permite una estructura ordenada y fácil de mantener.",
+    image: "/public/projects/j1.jpg",
+    github: "https://github.com/pupadevs/JornAPI",
+    link: "https://jorn-api-small-cherry-9652.fly.dev/",
+    tags: [TAGS.PHP, TAGS.LARAVEL, TAGS.MYSQL, TAGS.REDIS,TAGS.DOCKER],
+    
+  },
+  {
     title: "ITA Profiles - Proyecto de IT Academy",
     description:
       "ITA Profiles es un proyecto desarrollado por estudiantes del curso de post-especialización de IT Academy, cuyo objetivo es conectar a los propios estudiantes con empresas en busca de talento emergente. La plataforma permite a los alumnos crear perfiles profesionales que destacan sus habilidades y experiencia, facilitando su visibilidad ante potenciales empleadores. A través de este proyecto, los estudiantes tienen la oportunidad de trabajar en equipo bajo la metodología SCRUM, enfrentando desafíos reales y utilizando tecnologías comunes en la industria, lo que les permite ganar experiencia práctica y prepararse mejor para el mundo laboral",
@@ -80,23 +90,7 @@ const PROJECTS = [
     tags:[TAGS.LARAVEL, TAGS.PHP]
   },
 
-  {
-    title: "ForoHub - Creacion de topics",
-    description:"ForoHub API es una API desarrollada en Java utilizando Spring Boot, que permite la creación y gestión de tópicos y respuestas en un foro. La aplicación está diseñada siguiendo una arquitectura por capas, con uso de DTOs y patrones de diseño para mantener un código limpio y mantenible.",
-    github: "https://github.com/pupadevs/forohub_alurachallenge",
-    link: "",
-    image:"/projects/topic.webp",
-    tags:[TAGS.JAVA, TAGS.SPRING ,TAGS.MYSQL]
-  },
-   {
-    title: "Dice Game - API de juego de dados",
-    description:
-      "Esta API permite a los jugadores registrar tiradas de dados y calcular su tasa de éxito. También incluye autenticación a través de Laravel Passport y gestión de roles con Spatie Permission.",
-    github: "https://github.com/pupadevs/diceGameAPI",
-    link: "",
-    image: "https://svgsilh.com/svg/152068-e91e63.svg",
-    tags: [TAGS.PHP,TAGS.LARAVEL, TAGS.MYSQL],
-  }, 
+ 
 ]
 ---
 <div class="relative w-full overflow-y-auto scrollbar-hide">
